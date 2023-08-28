@@ -162,4 +162,14 @@ CELERY_TASK_TIME_LIMIT = 30 * 60
 CELERYBEAT_SCHEDULER = 'djcelery.schedulers.DatabaseScheduler'
 CELERY_BEAT_SCHEDULER = 'django_celery_beat.schedulers:DatabaseScheduler'
 
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = "auth.infocatalog@gmail.com"
+EMAIL_HOST_PASSWORD = "ssjqdsogvaxibybp"
+EMAIL_USE_TLS = True
+EMAIL_USE_SSL = False
+
+
 
