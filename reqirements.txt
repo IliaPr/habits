@@ -6,4 +6,5 @@ celery
 redis
 drf-yasg
 django-cors-headers
+django-filter
 
