@@ -9,7 +9,7 @@ https://docs.djangoproject.com/en/4.2/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.2/ref/settings/
 """
-
+import os
 from datetime import timedelta
 from pathlib import Path
 
@@ -40,8 +40,10 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     'rest_framework',
+    'rest_framework_simplejwt'
     'django_celery_beat',
     'drf_yasg',
+    'django_celery_beat',
 
     'users',
     'habits',
@@ -170,6 +172,18 @@ EMAIL_HOST_USER = "auth.infocatalog@gmail.com"
 EMAIL_HOST_PASSWORD = "ssjqdsogvaxibybp"
 EMAIL_USE_TLS = True
 EMAIL_USE_SSL = False
+
+TG_BOT_TOKEN = os.getenv("TG_HABBIT_BOT_TOKEN")
+
+CORS_ALLOWED_ORIGINS = [
+    'http://localhost:8000',
+]
+
+CSRF_TRUSTED_ORIGINS = [
+    'https://read-and-write.example.com',
+]
+
+CORS_ALLOW_ALL_ORIGINS = False
 
 
 

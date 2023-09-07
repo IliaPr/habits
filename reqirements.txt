@@ -4,3 +4,5 @@ pillow
 djangorestframework
 celery
 redis
+drf-yasg
+
