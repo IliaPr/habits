@@ -127,7 +127,7 @@ class HabitsTestCase(APITestCase):
                 'starting_time': '10:00:00',
                 'execution_time': 100,
                 'interval': 1,
-                'reward': 'test_reward', # не может быть у приятной привычки
+                'reward': 'test_reward',  # не может быть у приятной привычки
                 'bound_habit': '',
                 'is_pleasant': True,
                 'is_public': False,
