@@ -37,13 +37,13 @@
 5. Выполните миграции:
 
     ```bash
-    python manage.py migrate
+    python3 manage.py migrate
     ```
 
 6. Запустите сервер:
 
     ```bash
-    python manage.py runserver
+    python3 manage.py runserver
     ```
 
 7. Откройте приложение в браузере по адресу http://127.0.0.1:8000/
