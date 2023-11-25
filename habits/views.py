@@ -61,4 +61,3 @@ class PublicHabitListAPIView(generics.ListAPIView):
     serializer_class = HabitSerializer
     queryset = Habit.objects.filter(is_public=True)
     permission_classes = [IsAuthenticated]
-

@@ -12,4 +12,3 @@ urlpatterns = [
     path('create/', UserCreateAPIView.as_view(), name='user-create'),
     path('update/<int:pk>/', UserUpdateAPIView.as_view(), name='user-update'),
 ]
-

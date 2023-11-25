@@ -14,4 +14,3 @@ def pleasant_bound_validator(data):
 def pleasant_not_rewarded_validator(data):
     if data.get('is_pleasant') and (data.get('reward') or data.get('bound_habit')):
         raise ValidationError('Приятные привычки не могут иметь вознаграждение или связанную привычку.')
-

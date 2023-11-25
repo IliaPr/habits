@@ -12,4 +12,3 @@ def habits_notification(object_pk):
     message = f'Требуется совершить {habit.action} в {habit.starting_time} в {habit.place}'
     print(message)
     bot.send_message(habit.creator.chat_id, message)
-

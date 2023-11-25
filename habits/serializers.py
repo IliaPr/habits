@@ -8,4 +8,3 @@ class HabitSerializer(serializers.ModelSerializer):
         model = Habit
         fields = '__all__'
         validators = [double_reward_validator, pleasant_bound_validator, pleasant_not_rewarded_validator]
-

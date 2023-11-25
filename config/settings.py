@@ -12,6 +12,9 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 import os
 from datetime import timedelta
 from pathlib import Path
+from dotenv import load_dotenv
+
+load_dotenv()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -48,7 +51,6 @@ INSTALLED_APPS = [
 
     'users',
     'habits',
-    
 ]
 
 MIDDLEWARE = [
@@ -89,9 +91,9 @@ WSGI_APPLICATION = 'config.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'habits',
-        'USER': 'postgres',
-        'PASSWORD': '150774',
+        'NAME': os.getenv('DB_NAME'),
+        'USER': os.getenv('DB_USER'),
+        'PASSWORD': os.getenv('DB_PASSWORD'),
     }
 }
 
@@ -166,7 +168,7 @@ CELERY_TASK_TIME_LIMIT = 30 * 60
 CELERYBEAT_SCHEDULER = 'djcelery.schedulers.DatabaseScheduler'
 CELERY_BEAT_SCHEDULER = 'django_celery_beat.schedulers:DatabaseScheduler'
 
-TG_BOT_TOKEN = os.getenv("TG_HABBIT_BOT_TOKEN")
+TG_BOT_TOKEN = os.getenv("TG_BOT_TOKEN")
 
 CORS_ALLOWED_ORIGINS = [
     'http://localhost:8000',
@@ -177,6 +179,3 @@ CSRF_TRUSTED_ORIGINS = [
 ]
 
 CORS_ALLOW_ALL_ORIGINS = False
-
-
-

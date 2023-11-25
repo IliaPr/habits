@@ -20,5 +20,3 @@ class UserUpdateAPIView(generics.UpdateAPIView):
         else:
             user = self.request.user
             return User.objects.filter(pk=user.id)
-
-
