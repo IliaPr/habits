@@ -65,7 +65,7 @@
    docker-compose up --build
    ```
 6. После успешного запуска, ваше Django-приложение будет доступно:
-		```
+	```
     python manage.py runserver
     ```
 
